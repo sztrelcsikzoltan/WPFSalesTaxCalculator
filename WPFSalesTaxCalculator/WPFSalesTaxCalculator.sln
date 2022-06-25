@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSalesTaxCalculator", "WPFSalesTaxCalculator\WPFSalesTaxCalculator.csproj", "{F740D1CC-D798-4D9F-A877-8EDDAF2DFE88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSalesTaxCalculatorTests", "WPFSalesTaxCalculatorTests\WPFSalesTaxCalculatorTests.csproj", "{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F740D1CC-D798-4D9F-A877-8EDDAF2DFE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F740D1CC-D798-4D9F-A877-8EDDAF2DFE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F740D1CC-D798-4D9F-A877-8EDDAF2DFE88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
