@@ -8,6 +8,9 @@
         WindowStartupLocation="CenterScreen"
         Title="Sales Tax Calculator" Height="600" Width="800">
     <Grid>
-        
+        <StackPanel Margin="0,0,0,292">
+            <RichTextBox Name="richTextBox" FontSize="15" Block.LineHeight="2" Margin="31,40,212,292" Height="210" TextChanged="richTextBox_TextChanged">
+            </RichTextBox>
+        </StackPanel>
     </Grid>
 </Window>
