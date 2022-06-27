@@ -9,7 +9,8 @@
         Title="Sales Tax Calculator" Height="600" Width="800">
     <Grid>
         <StackPanel Margin="0,0,0,292">
-            <RichTextBox Name="richTextBox" FontSize="15" Block.LineHeight="2" Margin="31,40,212,292" Height="210" TextChanged="richTextBox_TextChanged">
+            <TextBox x:Name="textBox" Margin="5,15,5,0" Height="40" MaxWidth="800" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" Foreground="LightGreen" Background="Transparent" BorderThickness="0" >Welcome to itemis Sales Tax Calculator!</TextBox>
+            <RichTextBox Name="richTextBox" FontSize="15" Block.LineHeight="2" Margin="31,0,212,292" Height="210" TextChanged="richTextBox_TextChanged">
             </RichTextBox>
         </StackPanel>
     </Grid>
