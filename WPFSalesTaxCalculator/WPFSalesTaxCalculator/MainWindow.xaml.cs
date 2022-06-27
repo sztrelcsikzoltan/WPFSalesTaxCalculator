@@ -32,6 +32,26 @@ namespace WPFSalesTaxCalculator
             InitializeComponent();
         }
 
+        public void button_inputBasket1_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        public void button_inputBasket2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void button_inputBasket3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_inputNewBasket_Click(object sender, RoutedEventArgs e)
+        {
+  
+        }
+
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
