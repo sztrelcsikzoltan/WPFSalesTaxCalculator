@@ -39,5 +39,14 @@ namespace WPFSalesTaxCalculator.Classes
             if (imported) taxRate += 0.05;
             return Math.Floor(taxRate * 100) / 100; // floor to 2 decimal placed due to eventual floating point fractions
         }
+
+        // method to calculate sales tax and round up to the neares 0.05
+        public double CalculateSalesTax(double price, double taxRate)
+        {
+            double tax = price * taxRate;
+            double rFactor = 1 / 0.05; // returns 20, the multiplying and dividing factor of rounding
+            double taxRounded = Math.Ceiling(tax * rFactor) / rFactor; // rounding up to the nearest 0.05
+            return taxRounded;
+        }
     }
 }
