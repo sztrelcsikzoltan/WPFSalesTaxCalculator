@@ -26,5 +26,18 @@ namespace WPFSalesTaxCalculator.Classes
             if (category == null) { category = "other"; }
             return category;
         }
+
+        Dictionary<string, double> categoryByTaxDict = new Dictionary<string, double>() { { "book", 0.00 }, { "food", 0.00 }, { "medical", 0.00 }, { "default", 0.10 } };
+        // method to calculate tax rate based on product category and import status
+        public double CalculateTaxRate(string category, bool imported)
+        {
+            double taxRate = categoryByTaxDict.FirstOrDefault(d => d.Key == "default").Value;
+            if (categoryByTaxDict.ContainsKey(category))
+            {
+                taxRate = categoryByTaxDict.FirstOrDefault(d => d.Key == category).Value;
+            }
+            if (imported) taxRate += 0.05;
+            return Math.Floor(taxRate * 100) / 100; // floor to 2 decimal placed due to eventual floating point fractions
+        }
     }
 }
