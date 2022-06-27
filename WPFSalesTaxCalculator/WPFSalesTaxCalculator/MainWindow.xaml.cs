@@ -20,9 +20,15 @@ namespace WPFSalesTaxCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool contentChanged = false;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            contentChanged = true;
         }
     }
 }
