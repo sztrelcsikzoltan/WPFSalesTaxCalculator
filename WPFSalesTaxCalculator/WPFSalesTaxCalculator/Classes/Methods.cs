@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace WPFSalesTaxCalculator.Classes
 {
@@ -48,5 +50,21 @@ namespace WPFSalesTaxCalculator.Classes
             double taxRounded = Math.Ceiling(tax * rFactor) / rFactor; // rounding up to the nearest 0.05
             return taxRounded;
         }
+
+        // method to display the content of any sample basket or of the new basket
+        public string ShowSampleBasket(RichTextBox richTextBox, List<Item> itemsList)
+        {
+            richTextBox.Document.Blocks.Clear();
+            string basketContent = "";
+            string row = "";
+            foreach (Item item in itemsList)
+            {
+                row = $"> {item.Amount} {item.Name} at {item.PriceNet.ToString("0.00")}";
+                richTextBox.Document.Blocks.Add(new Paragraph(new Run(row)));
+                basketContent += row + "\r\n";
+            }
+            return basketContent;
+        }
+
     }
 }
