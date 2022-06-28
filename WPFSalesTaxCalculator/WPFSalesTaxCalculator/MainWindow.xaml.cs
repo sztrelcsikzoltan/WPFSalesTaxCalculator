@@ -26,7 +26,9 @@ namespace WPFSalesTaxCalculator
         List<Item> itemsList2 = new List<Item>() { new Item(1, "imported box of chocolates", 1, 10.00), new Item(2, "imported bottle of perfume", 1, 47.50) };
         List<Item> itemsList3 = new List<Item>() { new Item(1, "imported bottle of perfume", 1, 27.99), new Item(1, "bottle of parfume", 1, 18.99), new Item(2, "packet of headache pills", 1, 9.75), new Item(3, "box of imported chocolates", 1, 11.25) };
         List<Item> itemsListNew = new List<Item>();
+        Methods method = new Methods();
         bool contentChanged = false;
+        string output = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -36,7 +38,12 @@ namespace WPFSalesTaxCalculator
 
         public void button_inputBasket1_Click(object sender, RoutedEventArgs e)
         {
-            
+            itemsList = itemsList1;
+            output = "";
+            string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
+            // check whether content written into and read out of the richtextBox are identical
+            // string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
+            // bool contentOK = basketContent == richtextBoxContent; 
         }
 
         public void button_inputBasket2_Click(object sender, RoutedEventArgs e)
