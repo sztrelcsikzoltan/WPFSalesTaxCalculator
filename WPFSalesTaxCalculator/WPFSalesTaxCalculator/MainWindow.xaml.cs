@@ -30,6 +30,8 @@ namespace WPFSalesTaxCalculator
         public MainWindow()
         {
             InitializeComponent();
+
+            textBox.Text = "Welcome to itemis Sales Tax Calculator!\n Please select a sample basket or simply start entering the product(s) for your basket.";
         }
 
         public void button_inputBasket1_Click(object sender, RoutedEventArgs e)
