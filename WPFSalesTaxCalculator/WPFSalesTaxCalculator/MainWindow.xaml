@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WPFSalesTaxCalculator"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Sales Tax Calculator" Height="600" Width="800">
+        Title="Sales Tax Calculator" Height="600" Width="800"
+        MinWidth="550" MinHeight="600">
     <Grid>
         <StackPanel Margin="0,0,0,292">
             <TextBox x:Name="textBox" Margin="5,15,5,0" Height="40" MaxWidth="800" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" Foreground="LightGreen" Background="Transparent" BorderThickness="0" >Welcome to itemis Sales Tax Calculator!</TextBox>
