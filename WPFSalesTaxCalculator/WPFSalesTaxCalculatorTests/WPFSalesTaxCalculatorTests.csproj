@@ -50,6 +50,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTest_CheckRichTextBoxContent.cs" />
     <Compile Include="UnitTest_ShowSampleBasket.cs" />
     <Compile Include="UnitTest_CalculateSalesTax.cs" />
     <Compile Include="UnitTest_CalculateTaxRate.cs" />
