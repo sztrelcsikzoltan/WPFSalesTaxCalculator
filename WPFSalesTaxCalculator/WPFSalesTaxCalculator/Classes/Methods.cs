@@ -73,6 +73,31 @@ namespace WPFSalesTaxCalculator.Classes
             return basketContent == richTextBoxContent;
         }
 
+        // method to calculate the output for a basket, including sales tax
+        public string showOutputBasket(ListBox listBox, List<Item> itemsList)
+        {
+            listBox.Items.Clear();
+            string row = "";
+            string output = "";
+
+            foreach (Item item in itemsList)
+            {
+                row = $"> {item.Amount} {item.Name}: {(item.Amount * item.PriceGross).ToString("0.00")}";
+                output += row + "\n";
+                listBox.Items.Add(row);
+            }
+
+            double salesTaxes = itemsList.Sum(item => item.Amount * item.Tax);
+            double total = itemsList.Sum(item => item.Amount * item.PriceGross);
+            row = $"> Sales taxes: {salesTaxes.ToString("0.00")}";
+            output += row + "\n"; ;
+            listBox.Items.Add(row);
+            row = $"> Total: {total.ToString("0.00")}";
+            output += row + "\n"; ;
+            listBox.Items.Add(row);
+            return output;
+        }
+
 
     }
 }
