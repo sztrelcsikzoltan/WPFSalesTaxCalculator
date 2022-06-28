@@ -39,6 +39,7 @@ namespace WPFSalesTaxCalculator
         public void button_inputBasket1_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsList1;
+            listBox.Items.Clear();
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
@@ -49,6 +50,7 @@ namespace WPFSalesTaxCalculator
         public void button_inputBasket2_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsList2;
+            listBox.Items.Clear();
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
@@ -59,6 +61,7 @@ namespace WPFSalesTaxCalculator
         public void button_inputBasket3_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsList3;
+            listBox.Items.Clear();
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
@@ -69,6 +72,7 @@ namespace WPFSalesTaxCalculator
         private void button_inputNewBasket_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsListNew;
+            listBox.Items.Clear();
             richTextBox.Document.Blocks.Clear();
             richTextBox.Focus();
             output = "";
