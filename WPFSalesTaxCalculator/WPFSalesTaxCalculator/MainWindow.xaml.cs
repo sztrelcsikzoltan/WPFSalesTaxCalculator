@@ -156,6 +156,9 @@ namespace WPFSalesTaxCalculator
             {
                 itemsList.Add(item); // it also adds these items into the list currently assigned to itemsList! (this is how the changes are saved)
             }
+            
+            output = method.showOutputBasket(listBox, itemsList);
+            contentChanged = false;
 
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
