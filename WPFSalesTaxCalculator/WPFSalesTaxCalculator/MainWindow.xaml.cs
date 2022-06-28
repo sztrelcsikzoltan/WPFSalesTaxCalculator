@@ -117,6 +117,14 @@ namespace WPFSalesTaxCalculator
                     return;
                 }
 
+                int amount = result1;
+                if (amount < 1)
+                {
+                    textBox.Text = $"The amount '{parts[0]}' for item {counter} is incorrect. It must be 1 or more units. Please modify!";
+                    richTextBox.Focus();
+                    return;
+                }
+
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
