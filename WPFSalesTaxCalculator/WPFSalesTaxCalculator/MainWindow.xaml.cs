@@ -198,6 +198,11 @@ namespace WPFSalesTaxCalculator
             }
         }
 
+        private void button_saveToPdfFile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
