@@ -90,6 +90,8 @@ namespace WPFSalesTaxCalculator
                 // MessageBox.Show("Please enter a least 1 item before calculating the result!\nOr simply use a sample basket.");
                 return;
             }
+
+            List<Item> itemsList0 = new List<Item>(); // use a temporary list to store items, because the loop can be broken; once completed, add stored values into itemsList
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
