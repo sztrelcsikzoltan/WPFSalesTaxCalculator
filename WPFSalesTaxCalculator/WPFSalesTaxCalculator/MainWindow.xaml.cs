@@ -74,9 +74,15 @@ namespace WPFSalesTaxCalculator
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
         }
 
+        private void button_outputBasket_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
         }
+
     }
 }
