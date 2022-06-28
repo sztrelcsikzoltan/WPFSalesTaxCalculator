@@ -125,6 +125,13 @@ namespace WPFSalesTaxCalculator
                     return;
                 }
 
+                string name = ""; // add individual words of the name (at least 1 word)
+                for (int i = 1; i < parts.Length - 1; i++)
+                {
+                    if (i > 1) { name += " "; }
+                    name += parts[i];
+                }
+
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
