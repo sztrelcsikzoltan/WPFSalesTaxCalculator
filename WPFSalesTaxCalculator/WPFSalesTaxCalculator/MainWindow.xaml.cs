@@ -77,6 +77,7 @@ namespace WPFSalesTaxCalculator
         private void button_outputBasket_Click(object sender, RoutedEventArgs e)
         {
             string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
+            string[] rows = richtextBoxContent.Split(new string[] { "\r\n" }, StringSplitOptions.None);
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
