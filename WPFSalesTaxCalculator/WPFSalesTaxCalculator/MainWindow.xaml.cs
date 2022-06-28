@@ -92,8 +92,12 @@ namespace WPFSalesTaxCalculator
             }
 
             List<Item> itemsList0 = new List<Item>(); // use a temporary list to store items, because the loop can be broken; once completed, add stored values into itemsList
+            int counter = 1;
+            foreach (var row in rows)
+            {
+                if (counter == rows.Length) { break; } // stop before last row (the last row is empty in richTextBox)
+            }
         }
-
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
