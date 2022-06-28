@@ -96,6 +96,7 @@ namespace WPFSalesTaxCalculator
             foreach (var row in rows)
             {
                 if (counter == rows.Length) { break; } // stop before last row (the last row is empty in richTextBox)
+                if (row == "") { continue; } // skip eventual empty row)
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
