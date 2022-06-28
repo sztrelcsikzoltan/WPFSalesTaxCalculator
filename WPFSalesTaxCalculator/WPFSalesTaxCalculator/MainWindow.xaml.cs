@@ -76,7 +76,7 @@ namespace WPFSalesTaxCalculator
 
         private void button_outputBasket_Click(object sender, RoutedEventArgs e)
         {
-
+            string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
