@@ -19,7 +19,8 @@
             </RichTextBox>
         </StackPanel>
         <StackPanel Margin="0,293,0,0" >
-            <ListBox Name="listBox" FontSize="15" Margin="31,20,212,25" Height="210"/>
+            <Button x:Name="button_outputBasket" Click="button_outputBasket_Click" Content="OUTPUT BASKET" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" Width="150" Height="40" FontWeight="SemiBold" Foreground="LightSalmon" />
+            <ListBox Name="listBox" FontSize="15" Margin="31,-50,212,25" Height="210"/>
         </StackPanel>
     </Grid>
 </Window>
