@@ -97,6 +97,10 @@ namespace WPFSalesTaxCalculator
             {
                 if (counter == rows.Length) { break; } // stop before last row (the last row is empty in richTextBox)
                 if (row == "") { continue; } // skip eventual empty row)
+                string row1 = row.Replace(">", "").Replace("<", "");
+                row1 = row1.Replace(" at ", " ");
+                row1 = System.Text.RegularExpressions.Regex.Replace(row1, @"\s+", " ").Trim(); // remove unnecessary spaces
+                string[] parts = row1.Split(' ');
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
