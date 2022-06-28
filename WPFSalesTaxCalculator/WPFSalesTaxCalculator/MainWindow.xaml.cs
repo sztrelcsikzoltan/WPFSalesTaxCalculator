@@ -150,6 +150,13 @@ namespace WPFSalesTaxCalculator
                 itemsList0.Add(new Item(counter, name, amount, priceNet));
                 counter++;
             }
+            
+            itemsList.Clear();
+            foreach (var item in itemsList0)
+            {
+                itemsList.Add(item); // it also adds these items into the list currently assigned to itemsList! (this is how the changes are saved)
+            }
+
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
