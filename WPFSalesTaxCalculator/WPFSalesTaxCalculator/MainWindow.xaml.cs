@@ -171,7 +171,7 @@ namespace WPFSalesTaxCalculator
             
             output = method.showOutputBasket(listBox, itemsList);
             contentChanged = false;
-
+            textBox.Text = "Output for your basket is completed. You may send it now to a txt or pdf file.";
         }
 
         private void button_saveToTxtFile_Click(object sender, RoutedEventArgs e)
