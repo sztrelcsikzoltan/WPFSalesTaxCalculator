@@ -101,6 +101,13 @@ namespace WPFSalesTaxCalculator
                 row1 = row1.Replace(" at ", " ");
                 row1 = System.Text.RegularExpressions.Regex.Replace(row1, @"\s+", " ").Trim(); // remove unnecessary spaces
                 string[] parts = row1.Split(' ');
+
+                if (parts.Length < 3) // 3 parts are required: amount, name and price
+                {
+                    textBox.Text = $"Missing information for item {counter}. Please add Amount, Name and Price (separated by space).";
+                    richTextBox.Focus();
+                    return;
+                }
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
