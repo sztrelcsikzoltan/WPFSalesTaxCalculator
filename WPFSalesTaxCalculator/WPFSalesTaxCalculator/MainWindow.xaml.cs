@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -172,7 +174,28 @@ namespace WPFSalesTaxCalculator
 
         private void button_saveToTxtFile_Click(object sender, RoutedEventArgs e)
         {
+            if (output == "")
+            {
+                textBox.Text = $"First please create a basket and generate the results for it!";
+                return;
+            }
 
+            SaveFileDialog saveFileDialog = new SaveFileDialog()
+            {
+                Filter = "Text file (*.txt)|*.txt",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                FileName = $"Shopping basket {DateTime.Now.ToString().Replace(":", "-")} ",
+                Title = "Save shopping basket as:"
+            };
+            Nullable<bool> result = saveFileDialog.ShowDialog(); // show saveFileDialog
+
+            if (result == true)
+            {
+                StreamWriter sw = new StreamWriter(saveFileDialog.FileName);
+                sw.Write(output);
+                sw.Close();
+                textBox.Text = $"The text file was saved as '{saveFileDialog.FileName}'.";
+            }
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
