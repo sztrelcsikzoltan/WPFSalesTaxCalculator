@@ -79,9 +79,17 @@ namespace WPFSalesTaxCalculator
             string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
             string[] rows = richtextBoxContent.Split(new string[] { "\r\n" }, StringSplitOptions.None);
 
-            // create output in itemsList based on the content of richTextBox
+            // Create output in itemsList based on the content of richTextBox:
+
             // return if richTextBoxContent did not change and output in listBox already available
             if (contentChanged == false && output != "") { return; }
+
+            if (rows.Length <= 1 || richtextBoxContent.Replace("\r\n", "").Replace(" ", "") == "")
+            {
+                textBox.Text = "Please enter a least 1 item before calculating the result!\nOr simply use a sample basket.";
+                // MessageBox.Show("Please enter a least 1 item before calculating the result!\nOr simply use a sample basket.");
+                return;
+            }
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
