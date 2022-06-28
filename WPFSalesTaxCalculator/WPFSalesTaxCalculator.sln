@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSalesTaxCalculator", "WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSalesTaxCalculatorTests", "WPFSalesTaxCalculatorTests\WPFSalesTaxCalculatorTests.csproj", "{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WPFSalesTaxCalculatorSetup", "WPFSalesTaxCalculatorSetup\WPFSalesTaxCalculatorSetup.vdproj", "{14BAA410-C6DC-4F8F-9B51-7E7D7CCCA096}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B34339B-82B1-4B07-BF1E-F54C69F5CF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14BAA410-C6DC-4F8F-9B51-7E7D7CCCA096}.Debug|Any CPU.ActiveCfg = Debug
+		{14BAA410-C6DC-4F8F-9B51-7E7D7CCCA096}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
