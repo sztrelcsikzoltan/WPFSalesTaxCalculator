@@ -139,6 +139,14 @@ namespace WPFSalesTaxCalculator
                     return;
                 }
 
+
+                double priceNet = result2;
+                if (priceNet <= 0)
+                {
+                    textBox.Text = $"The price '{parts[parts.Length - 1]}' for item {counter} is incorrect. It must more than zero. Please modify!";
+                    return;
+                }
+
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
