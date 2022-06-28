@@ -67,7 +67,7 @@ namespace WPFSalesTaxCalculator.Classes
         }
 
         // method to check whether content written into and read out of the richTextBox are identical
-        private bool CheckRichTextBoxContent(string basketContent, RichTextBox richTextBox)
+        public bool CheckRichTextBoxContent(string basketContent, RichTextBox richTextBox)
         {
             string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
             return basketContent == richTextBoxContent;

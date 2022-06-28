@@ -23,9 +23,12 @@ namespace WPFSalesTaxCalculatorTests
             // in WPF RichTextBox, the lines are separated by the '\r\n>' characters, so it must be considered
             // string basketContent = "> 1 book at 12,49\r\n> 1 music CD at 14,99\r\n> 1 chocolate bar at 0,85\r\n";
             // string richTextBoxContent = "> 1 book at 12,49\r\n> 1 music CD at 14,99\r\n> 1 chocolate bar at 0,85\r\n";
+            
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList1); // data written into richTextBox
-            string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
-            bool condition = basketContent == richTextBoxContent;
+            // string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
+            // bool condition = basketContent == richTextBoxContent;
+
+            bool condition = method.CheckRichTextBoxContent(basketContent, richTextBox);
             Assert.IsTrue(condition);
         }
 
@@ -35,9 +38,11 @@ namespace WPFSalesTaxCalculatorTests
             // in WPF RichTextBox, the lines are separated by the '\r\n>' characters, so it must be considered
             // string basketContent = "> 1 imported box of chocolates at 10,00\r\n> 1 imported bottle of perfume at 47,50\r\n";
             // string richTextBoxContent = "> 1 imported box of chocolates at 10,00\r\n> 1 imported bottle of perfume at 47,50\r\n";
+            
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList2); // data written into richTextBox
-            string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
-            bool condition = basketContent == richTextBoxContent;
+            // string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
+            
+            bool condition = method.CheckRichTextBoxContent(basketContent, richTextBox);
             Assert.IsTrue(condition);
         }
 
@@ -48,8 +53,10 @@ namespace WPFSalesTaxCalculatorTests
             // string basketContent = "> 1 imported bottle of perfume at 27,99\r\n> 1 bottle of perfume at 18,99\r\n> 1 packet of headache pills at 9,75\r\n> 1 box of imported chocolates at 11,25\r\n";
             // string richTextBoxContent = "> 1 imported bottle of perfume at 27,99\r\n> 1 bottle of perfume at 18,99\r\n> 1 packet of headache pills at 9,75\r\n> 1 box of imported chocolates at 11,25\r\n";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList3); // data written into richTextBox
-            string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
-            bool condition = basketContent == richTextBoxContent;
+
+            // string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
+
+            bool condition = method.CheckRichTextBoxContent(basketContent, richTextBox);
             Assert.IsTrue(condition);
         }
 
@@ -59,8 +66,10 @@ namespace WPFSalesTaxCalculatorTests
             // string basketContent = "";
             // string richTextBoxContent = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsListNew); // data written into richTextBox
-            string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
-            bool condition = basketContent == richTextBoxContent;
+
+            // string richTextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; // data read out from richTextBox
+
+            bool condition = method.CheckRichTextBoxContent(basketContent, richTextBox);
             Assert.IsTrue(condition);
         }
     }
