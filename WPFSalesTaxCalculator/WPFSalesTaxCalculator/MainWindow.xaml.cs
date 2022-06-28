@@ -43,6 +43,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
+            textBox.Text = $"Basket 1 is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.";
         }
 
         public void button_inputBasket2_Click(object sender, RoutedEventArgs e)
@@ -51,7 +52,7 @@ namespace WPFSalesTaxCalculator
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
-            // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
+            // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);            textBox.Text = $"Basket 2 is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.";
         }
 
         public void button_inputBasket3_Click(object sender, RoutedEventArgs e)
@@ -61,6 +62,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
+            textBox.Text = $"Basket 3 is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.";
         }
 
         private void button_inputNewBasket_Click(object sender, RoutedEventArgs e)
@@ -72,6 +74,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
+            textBox.Text = $"Now you can enter the Amount, Name and Price of your products (separated by space).\n Your modifications will be kept in memory after the output is made.";
         }
 
         private void button_outputBasket_Click(object sender, RoutedEventArgs e)
