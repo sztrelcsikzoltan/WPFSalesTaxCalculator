@@ -132,6 +132,13 @@ namespace WPFSalesTaxCalculator
                     name += parts[i];
                 }
 
+                bool isDouble = double.TryParse(parts[parts.Length - 1], out double result2); // the last part is the price
+                if (!isDouble)
+                {
+                    textBox.Text = $"The price '{parts[parts.Length - 1]}' for item {counter} is incorrect. Please modify!";
+                    return;
+                }
+
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
