@@ -68,7 +68,14 @@ namespace WPFSalesTaxCalculator
 
         private void button_inputNewBasket_Click(object sender, RoutedEventArgs e)
         {
-  
+            itemsList = itemsListNew;
+            richTextBox.Document.Blocks.Clear();
+            richTextBox.Focus();
+            output = "";
+            string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
+            // check whether content written into and read out of the richtextBox are identical
+            // string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
+            // bool contentOK = basketContent == richtextBoxContent; 
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
