@@ -222,6 +222,11 @@ namespace WPFSalesTaxCalculator
             textBox.Text = $"The pdf file was saved.";
         }
 
+        private void button_resetBaskets_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
