@@ -108,6 +108,15 @@ namespace WPFSalesTaxCalculator
                     richTextBox.Focus();
                     return;
                 }
+
+                bool isInteger = int.TryParse(parts[0], out int result1);
+                if (!isInteger)
+                {
+                    textBox.Text = $"The amount '{parts[0]}' for item {counter} is incorrect. It must be a whole number. Please modify!";
+                    richTextBox.Focus();
+                    return;
+                }
+
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
