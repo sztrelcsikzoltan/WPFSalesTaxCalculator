@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,7 @@ namespace WPFSalesTaxCalculator
         Methods method = new Methods();
         bool contentChanged = false;
         string output = "";
+        private System.Drawing.Printing.PrintDocument printDocument;
         public MainWindow()
         {
             InitializeComponent();
@@ -200,7 +202,24 @@ namespace WPFSalesTaxCalculator
 
         private void button_saveToPdfFile_Click(object sender, RoutedEventArgs e)
         {
+            if (output == "")
+            {
+                textBox.Text = $"First please create a basket and generate the results for it!";
+                return;
+            }
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
 
+            printDocument.Print();
+        }
+
+        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Font printFont = new Font("Arial", 18, System.Drawing.FontStyle.Regular);
+            System.Drawing.Brush brush = new SolidBrush(System.Drawing.Color.Black);
+            e.Graphics.DrawString(output, printFont, brush, 20, 20);
+
+            textBox.Text = $"The pdf file was saved.";
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
