@@ -147,6 +147,8 @@ namespace WPFSalesTaxCalculator
                     return;
                 }
 
+                itemsList0.Add(new Item(counter, name, amount, priceNet));
+                counter++;
             }
         }
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
