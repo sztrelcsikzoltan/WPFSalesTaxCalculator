@@ -78,6 +78,10 @@ namespace WPFSalesTaxCalculator
         {
             string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
             string[] rows = richtextBoxContent.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+
+            // create output in itemsList based on the content of richTextBox
+            // return if richTextBoxContent did not change and output in listBox already available
+            if (contentChanged == false && output != "") { return; }
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
