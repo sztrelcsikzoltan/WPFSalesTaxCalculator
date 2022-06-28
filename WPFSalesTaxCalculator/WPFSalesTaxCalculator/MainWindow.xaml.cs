@@ -169,6 +169,12 @@ namespace WPFSalesTaxCalculator
             contentChanged = false;
 
         }
+
+        private void button_saveToTxtFile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
