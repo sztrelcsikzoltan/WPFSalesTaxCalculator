@@ -51,7 +51,7 @@ Txt file output for sample basket 3:
 
 Save to pdf file dialog:
 <p align="left">
-  <img src="Documentation/images/45 save to txt file dialog.png" alt="save to txt file dialog" title="save to pdf file dialog" />
+  <img src="Documentation/images/47 save to pdf file dialog.png" alt="save to pdf file dialog" title="save to pdf file dialog" />
 </p>
 
 
@@ -81,7 +81,7 @@ Installation complete
 
 Installation files
 <p align="left">
-  <img src="Documentation/images/39 installation files.png" alt="installation files" title="installation files" />
+  <img src="Documentation/images/40 installation files.png" alt="installation files" title="installation files" />
 </p>
 
 
