@@ -4,13 +4,13 @@ Sales tax calculator for shopping baskets
 This user-friendly WPF application is able to calculate and output the sales tax calculation for different products. It contains 3 samples baskets, and it can calculate new product baskets as well. In additions, you can send the results into a .txt file or into a .pdf file.
 
 #### Extra features:
--	you do not need to type in the content of any sample basket – just click on the corresponding button and the basket content will be displayed immediately; of course the user may choose to type in the content of and basket, or change it
+-	you do not need to type in the content of any sample basket – just click on the corresponding button and the basket content will be displayed immediately; of course the user may choose to type in the content of any basket, or change it
 -	you can change any basket and generate the results for them
 -	the changes are stored in memory, you can reuse the changed baskets
 -	this applies also for the new basket
 -	you can any time reset the content of the baskets and use their original content
 -	the application calculates the total price for any product if you provide an amount of more than 1; therefore, the price should always be indicated for 1 unit
--	you can add a huge amount of products into a basket, and you can scroll through them in both the input and output boxes;
+-	you can add a huge amount of products into a basket, and you can scroll through them in both the input and output boxes
 
 
 #### A few images about the application:
