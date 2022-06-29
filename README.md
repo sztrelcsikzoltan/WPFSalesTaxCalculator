@@ -35,7 +35,7 @@ Input and output screen for sample shopping basket 3:
 
 Input and output screen for a new shopping basket (with various amount of products):
 <p align="left">
-  <img src="Documentation/images/44 output for sample basket 3.png" alt="new shopping basket" title="new shopping basket" />
+  <img src="Documentation/images/44 output for new basket.png" alt="new shopping basket" title="new shopping basket" />
 </p>
 
 Save to txt file dialog:
