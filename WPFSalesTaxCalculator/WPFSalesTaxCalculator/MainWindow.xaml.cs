@@ -23,6 +23,7 @@ namespace WPFSalesTaxCalculator
         Methods method = new Methods();
         bool contentChanged = false;
         string output = "";
+        string inputBasketMessage = "Basket Number is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.\nIf you change the amount, leave the price for 1 unit, and the total price will be calculated automatically.";
         private System.Drawing.Printing.PrintDocument printDocument;
         public MainWindow()
         {
@@ -39,7 +40,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
-            textBox.Text = $"Basket 1 is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.";
+            textBox.Text = inputBasketMessage.Replace("Number", "1");
         }
 
         public void button_inputBasket2_Click(object sender, RoutedEventArgs e)
@@ -50,7 +51,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
-            textBox.Text = $"Basket 2 is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.";
+            textBox.Text = inputBasketMessage.Replace("Number", "2");
         }
 
         public void button_inputBasket3_Click(object sender, RoutedEventArgs e)
@@ -61,7 +62,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
-            textBox.Text = $"Basket 3 is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.";
+            textBox.Text = inputBasketMessage.Replace("Number", "3");
         }
 
         private void button_inputNewBasket_Click(object sender, RoutedEventArgs e)
@@ -74,7 +75,7 @@ namespace WPFSalesTaxCalculator
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
-            textBox.Text = $"Now you can enter the Amount, Name and Price of your products (separated by space).\n Your modifications will be kept in memory after the output is made.";
+            textBox.Text = $"Please enter Amount, Name and Price of your products (separated by space).\n Your modifications will be kept in memory after the output is made.\nAlways provide prices for 1 unit, as the total price will be calculated automatically.";
         }
 
         private void button_outputBasket_Click(object sender, RoutedEventArgs e)
