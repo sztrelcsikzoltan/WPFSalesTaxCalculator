@@ -15,6 +15,7 @@ namespace WPFSalesTaxCalculatorTests
         List<Item> itemsList2 = new List<Item>() { new Item(1, "imported box of chocolates", 1, 10.00), new Item(2, "imported bottle of perfume", 1, 47.50) };
         List<Item> itemsList3 = new List<Item>() { new Item(1, "imported bottle of perfume", 1, 27.99), new Item(1, "bottle of perfume", 1, 18.99), new Item(2, "packet of headache pills", 1, 9.75), new Item(3, "box of imported chocolates", 1, 11.25) };
         List<Item> itemsListNew = new List<Item>();
+        List<Item> itemsListNew3Products = new List<Item>() { new Item(1, "black cat", 1, 10.00), new Item(2, "black cats", 2, 10.00), new Item(3, "imported pink panthers", 3, 10.00) };
 
         [TestMethod]
         public void OutputSampleBasket1()
@@ -53,6 +54,15 @@ namespace WPFSalesTaxCalculatorTests
             // if there is no content in the richtextBox, the method will not run and the output will remain empty;
             string actual = richTextBoxContent == "" ? "" : method.showOutputBasket(listBox, itemsListNew);
             bool condition = actual == "";
+            Assert.IsTrue(condition);
+        }
+
+        [TestMethod]
+        public void OutputNewBasketWithItems()
+        {
+            // the output with decimal symbol ',' or '.' can be correct depending on the actual regional settings
+            string actual = method.showOutputBasket(listBox, itemsListNew3Products);
+            bool condition = actual == "> 1 black cat: 11,00\n> 2 black cats: 22,00\n> 3 imported pink panthers: 34,50\n> Sales taxes: 7,50\n> Total: 67,50\n";
             Assert.IsTrue(condition);
         }
 
