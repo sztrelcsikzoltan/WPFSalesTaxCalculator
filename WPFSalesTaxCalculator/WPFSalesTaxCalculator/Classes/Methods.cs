@@ -89,7 +89,7 @@ namespace WPFSalesTaxCalculator.Classes
 
             double salesTaxes = itemsList.Sum(item => item.Amount * item.Tax);
             double total = itemsList.Sum(item => item.Amount * item.PriceGross);
-            row = $"> Sales taxes: {salesTaxes.ToString("0.00")}";
+            row = $"> Sales Taxes: {salesTaxes.ToString("0.00")}";
             output += row + "\n"; ;
             listBox.Items.Add(row);
             row = $"> Total: {total.ToString("0.00")}";
