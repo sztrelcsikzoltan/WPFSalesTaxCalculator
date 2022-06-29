@@ -33,6 +33,11 @@ Input and output screen for sample shopping basket 3:
   <img src="Documentation/images/43 output for sample basket 3.png" alt="sample basket 3" title="sample basket 3" />
 </p>
 
+Input and output screen for a new shopping basket (with various amount of products):
+<p align="left">
+  <img src="Documentation/images/44 output for sample basket 3.png" alt="new shopping basket" title="new shopping basket" />
+</p>
+
 Save to txt file dialog:
 <p align="left">
   <img src="Documentation/images/45 save to txt file dialog.png" alt="save to txt file dialog" title="save to txt file dialog" />
