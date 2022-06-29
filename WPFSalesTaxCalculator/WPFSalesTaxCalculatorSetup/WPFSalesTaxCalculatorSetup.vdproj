@@ -15,26 +15,32 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_6B446DD9099C44F3AD99035D4B80F3BA"
-        "OwnerKey" = "8:_72916BF0AE004EFD8204A478CD1A66F1"
+        "MsmKey" = "8:_1F261AC6CA3641948AD2E66C6CAB64EB"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_72916BF0AE004EFD8204A478CD1A66F1"
+        "MsmKey" = "8:_507161CF70DA576D2AD092478E3D1697"
+        "OwnerKey" = "8:_AABA6E8AE04546FC80B2D76AAE6C5241"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AABA6E8AE04546FC80B2D76AAE6C5241"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6B446DD9099C44F3AD99035D4B80F3BA"
+        "OwnerKey" = "8:_AABA6E8AE04546FC80B2D76AAE6C5241"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_72916BF0AE004EFD8204A478CD1A66F1"
+        "OwnerKey" = "8:_507161CF70DA576D2AD092478E3D1697"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -55,6 +61,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -71,6 +93,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -100,14 +138,34 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6B446DD9099C44F3AD99035D4B80F3BA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F261AC6CA3641948AD2E66C6CAB64EB"
+            {
+            "SourcePath" = "8:sun-day-weather-symbol_icon-icons.com_73146.ico"
+            "TargetName" = "8:sun-day-weather-symbol_icon-icons.com_73146.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_66043E816CAB4263B52B83460F951277"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_507161CF70DA576D2AD092478E3D1697"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_6B446DD9099C44F3AD99035D4B80F3BA"
+                    "_507161CF70DA576D2AD092478E3D1697"
                     {
                     "Name" = "8:System.Net.Http.dll"
                     "Attributes" = "3:512"
@@ -163,7 +221,7 @@
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
@@ -186,9 +244,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:WPFSalesTaxCalculatorSetup"
+        "ProductName" = "8:Sales Tax Calculator "
         "ProductCode" = "8:{F04CD6FF-BDB3-42AF-9855-C808E4F162DA}"
-        "PackageCode" = "8:{9713CCCA-9AC6-408D-A0AC-912C54AEDBD1}"
+        "PackageCode" = "8:{E9DA0A4D-6C2A-42EA-BF05-601E48D6BDAC}"
         "UpgradeCode" = "8:{FCF24B58-E1F0-474B-AAF3-A59909C244FB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -196,12 +254,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Zoltan Sztrelcsik"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:WPFSalesTaxCalculatorSetup"
+        "Title" = "8:Sales Tax Calculator"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Zoltan"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -308,6 +366,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_063F3E2A7A7D40738B9E26BC142A7E8B"
+            {
+            "Name" = "8:Sales Tax Calculator"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_AABA6E8AE04546FC80B2D76AAE6C5241"
+            "Folder" = "8:_221E04B99323477B8ECA4CEEC43825E0"
+            "WorkingFolder" = "8:_221E04B99323477B8ECA4CEEC43825E0"
+            "Icon" = "8:_1F261AC6CA3641948AD2E66C6CAB64EB"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F407D6C33C07482C9EA72ABDE330D054"
+            {
+            "Name" = "8:Sales Tax Calculator"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_AABA6E8AE04546FC80B2D76AAE6C5241"
+            "Folder" = "8:_2BCFC0F0D9184C5196CCE1EC75A9DD2A"
+            "WorkingFolder" = "8:_66043E816CAB4263B52B83460F951277"
+            "Icon" = "8:_1F261AC6CA3641948AD2E66C6CAB64EB"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -707,7 +793,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_72916BF0AE004EFD8204A478CD1A66F1"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_AABA6E8AE04546FC80B2D76AAE6C5241"
             {
             "SourcePath" = "8:..\\WPFSalesTaxCalculator\\obj\\Debug\\WPFSalesTaxCalculator.exe"
             "TargetName" = "8:"

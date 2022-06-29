@@ -223,7 +223,7 @@ namespace WPFSalesTaxCalculator
             richTextBox.Document.Blocks.Clear();
             listBox.Items.Clear();
 
-            textBox.Text = $"Content of the baskets were reset.";
+            textBox.Text = $"Content of the baskets was reset.";
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
