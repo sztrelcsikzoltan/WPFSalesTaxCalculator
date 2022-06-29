@@ -161,7 +161,7 @@ namespace WPFSalesTaxCalculator
                 itemsList.Add(item); // it also adds these items into the list currently assigned to itemsList! (this is how the changes are saved)
             }
             
-            output = method.showOutputBasket(listBox, itemsList);
+            output = method.ShowOutputBasket(listBox, itemsList);
             contentChanged = false;
             textBox.Text = "Output for your basket is completed. You may send it now to a txt or pdf file.";
         }

@@ -74,7 +74,7 @@ namespace WPFSalesTaxCalculator.Classes
         }
 
         // method to calculate the output for a basket, including sales tax
-        public string showOutputBasket(ListBox listBox, List<Item> itemsList)
+        public string ShowOutputBasket(ListBox listBox, List<Item> itemsList)
         {
             listBox.Items.Clear();
             string row = "";

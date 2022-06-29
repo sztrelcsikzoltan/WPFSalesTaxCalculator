@@ -22,7 +22,7 @@ namespace WPFSalesTaxCalculatorTests
         {
             // the output with decimal symbol ',' or '.' can be correct depending on the actual regional settings
             // string actual = "> 1 book: 12,49\n> 1 music CD: 16,49\n> 1 chocolate bar: 0,85\n> Sales taxes: 1,50\n> Total: 29,83\n";
-            string actual = method.showOutputBasket(listBox, itemsList1);
+            string actual = method.ShowOutputBasket(listBox, itemsList1);
             bool condition = actual =="> 1 book: 12,49\n> 1 music CD: 16,49\n> 1 chocolate bar: 0,85\n> Sales taxes: 1,50\n> Total: 29,83\n" || actual == "> 1 book: 12.49\n> 1 music CD: 16.49\n> 1 chocolate bar: 0.85\n> Sales taxes: 1.50\n> Total: 29.83\n";
             Assert.IsTrue(condition);
         }
@@ -32,7 +32,7 @@ namespace WPFSalesTaxCalculatorTests
         {
             // the output with decimal symbol ',' or '.' can be correct depending on the actual regional settings
             // string actual = "> 1 imported box of chocolates: 10,50\n> 1 imported bottle of perfume: 54,65\n> Sales taxes: 7,65\n> Total: 65,15\n";
-            string actual = method.showOutputBasket(listBox, itemsList2);
+            string actual = method.ShowOutputBasket(listBox, itemsList2);
             bool condition = actual == "> 1 imported box of chocolates: 10,50\n> 1 imported bottle of perfume: 54,65\n> Sales taxes: 7,65\n> Total: 65,15\n" || actual == "> 1 imported box of chocolates: 10.50\n> 1 imported bottle of perfume: 54.65\n> Sales taxes: 7.65\n> Total: 65.15\n";
             Assert.IsTrue(condition);
         }
@@ -42,7 +42,7 @@ namespace WPFSalesTaxCalculatorTests
         {
             // the output with decimal symbol ',' or '.' can be correct depending on the actual regional settings
             // string actual = "> 1 imported bottle of perfume: 32,19\n> 1 bottle of perfume: 20,89\n> 1 packet of headache pills: 9,75\n> 1 box of imported chocolates: 11,85\n> Sales taxes: 6,70\n> Total: 74,68\n";
-            string actual = method.showOutputBasket(listBox, itemsList3);
+            string actual = method.ShowOutputBasket(listBox, itemsList3);
             bool condition = actual == "> 1 imported bottle of perfume: 32,19\n> 1 bottle of perfume: 20,89\n> 1 packet of headache pills: 9,75\n> 1 box of imported chocolates: 11,85\n> Sales taxes: 6,70\n> Total: 74,68\n" || actual == "> 1 imported bottle of perfume: 32.19\n> 1 bottle of perfume: 20.89\n> 1 packet of headache pills: 9.75\n> 1 box of imported chocolates: 11.85\n> Sales taxes: 6.70\n> Total: 74.68\n";
             Assert.IsTrue(condition);
         }
@@ -52,7 +52,7 @@ namespace WPFSalesTaxCalculatorTests
         {
             string richTextBoxContent = "";
             // if there is no content in the richtextBox, the method will not run and the output will remain empty;
-            string actual = richTextBoxContent == "" ? "" : method.showOutputBasket(listBox, itemsListNew);
+            string actual = richTextBoxContent == "" ? "" : method.ShowOutputBasket(listBox, itemsListNew);
             bool condition = actual == "";
             Assert.IsTrue(condition);
         }
@@ -61,7 +61,7 @@ namespace WPFSalesTaxCalculatorTests
         public void OutputNewBasketWithItems()
         {
             // the output with decimal symbol ',' or '.' can be correct depending on the actual regional settings
-            string actual = method.showOutputBasket(listBox, itemsListNew3Products);
+            string actual = method.ShowOutputBasket(listBox, itemsListNew3Products);
             bool condition = actual == "> 1 black cat: 11,00\n> 2 black cats: 22,00\n> 3 imported pink panthers: 34,50\n> Sales taxes: 7,50\n> Total: 67,50\n";
             Assert.IsTrue(condition);
         }
