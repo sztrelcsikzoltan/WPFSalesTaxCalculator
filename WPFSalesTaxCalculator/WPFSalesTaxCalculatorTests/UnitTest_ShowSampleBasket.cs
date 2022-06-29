@@ -13,7 +13,7 @@ namespace WPFSalesTaxCalculatorTests
         RichTextBox richTextBox = new RichTextBox();
         List<Item> itemsList1 = new List<Item>() { new Item(1, "book", 1, 12.49), new Item(2, "music CD", 1, 14.99), new Item(3, "chocolate bar", 1, 0.85) };
         List<Item> itemsList2 = new List<Item>() { new Item(1, "imported box of chocolates", 1, 10.00), new Item(2, "imported bottle of perfume", 1, 47.50) };
-        List<Item> itemsList3 = new List<Item>() { new Item(1, "imported bottle of perfume", 1, 27.99), new Item(1, "bottle of perfume", 1, 18.99), new Item(2, "packet of headache pills", 1, 9.75), new Item(3, "box of imported chocolates", 1, 11.25) };
+        List<Item> itemsList3 = new List<Item>() { new Item(1, "imported bottle of perfume", 1, 27.99), new Item(2, "bottle of perfume", 1, 18.99), new Item(3, "packet of headache pills", 1, 9.75), new Item(4, "box of imported chocolates", 1, 11.25) };
         List<Item> itemsListNew = new List<Item>();
 
         [TestMethod]
