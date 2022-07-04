@@ -70,7 +70,6 @@ namespace WPFSalesTaxCalculator
             itemsList = itemsListNew;
             listBox.Items.Clear();
             richTextBox.Document.Blocks.Clear();
-            richTextBox.Focus();
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // add placeholder into richTextBox if user did not add any conntet yet
@@ -80,6 +79,7 @@ namespace WPFSalesTaxCalculator
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 2 black cats at 10,00")));
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 3 imported pink panthers at 10,00")));
             }
+            else {  richTextBox.Focus(); } // otherwise set Focus
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
             textBox.Text = $"Please enter Amount, Name and Price of your products (separated by space).\n Your modifications will be kept in memory after the output is made.\nAlways provide prices for 1 unit, as the total price will be calculated automatically.";
