@@ -72,6 +72,7 @@ namespace WPFSalesTaxCalculator
             itemsList = itemsListNew;
             listBox.Items.Clear();
             richTextBox.Document.Blocks.Clear();
+            placeholder = false;
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // add placeholder into richTextBox if user did not add any content yet
