@@ -25,6 +25,7 @@ namespace WPFSalesTaxCalculator
         string output = "";
         string inputBasketMessage = "Basket Number is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.\nIf you change the amount, leave the price for 1 unit, and the total price will be calculated automatically.";
         private System.Drawing.Printing.PrintDocument printDocument;
+        private bool placeholder = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -78,6 +79,7 @@ namespace WPFSalesTaxCalculator
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 1 black cat at 10,00")));
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 2 black cats at 10,00")));
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 3 imported pink panthers at 10,00")));
+                placeholder = true;
             }
             else {  richTextBox.Focus(); } // otherwise set Focus
             // check whether content written into and read out of the richtextBox are identical
@@ -241,7 +243,11 @@ namespace WPFSalesTaxCalculator
 
         private void richTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-
+            if (placeholder)
+            {
+                richTextBox.Document.Blocks.Clear();
+                placeholder = false;
+            }
         }
     }
 }
