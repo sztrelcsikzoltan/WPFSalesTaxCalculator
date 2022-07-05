@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Media;
 using WPFSalesTaxCalculator.Classes;
 
 namespace WPFSalesTaxCalculator
@@ -79,6 +80,10 @@ namespace WPFSalesTaxCalculator
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 1 black cat at 10,00")));
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 2 black cats at 10,00")));
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 3 imported pink panthers at 10,00")));
+                // set color of placeholder content to gray
+                richTextBox.SelectAll();
+                TextSelection ts = richTextBox.Selection;
+                ts.ApplyPropertyValue(ForegroundProperty, System.Windows.Media.Brushes.Gray);
                 placeholder = true;
             }
             else {  richTextBox.Focus(); } // otherwise set Focus
