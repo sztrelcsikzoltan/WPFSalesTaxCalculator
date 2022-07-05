@@ -72,7 +72,7 @@ namespace WPFSalesTaxCalculator
             richTextBox.Document.Blocks.Clear();
             output = "";
             string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
-            // add placeholder into richTextBox if user did not add any conntet yet
+            // add placeholder into richTextBox if user did not add any content yet
             if (itemsList.Count == 0)
             {
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("> 1 black cat at 10,00")));
@@ -239,5 +239,9 @@ namespace WPFSalesTaxCalculator
             contentChanged = true;
         }
 
+        private void richTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
