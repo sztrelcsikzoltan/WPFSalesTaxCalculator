@@ -90,7 +90,7 @@ namespace WPFSalesTaxCalculator
             else {  richTextBox.Focus(); } // otherwise set Focus
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
-            textBox.Text = $"Please enter Amount, Name and Price of your products (separated by space).\n Your modifications will be kept in memory after the output is made.\nAlways provide prices for 1 unit, as the total price will be calculated automatically.";
+            textBox.Text = $"Enter your products similarly to the below sample basket.\n Your modifications will be kept in memory after the output is made.\nAlways provide prices for 1 unit, as the total price will be calculated automatically.";
         }
 
         private void button_outputBasket_Click(object sender, RoutedEventArgs e)
