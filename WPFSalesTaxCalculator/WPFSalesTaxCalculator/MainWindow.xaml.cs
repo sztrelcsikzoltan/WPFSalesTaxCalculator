@@ -39,7 +39,7 @@ namespace WPFSalesTaxCalculator
             itemsList = itemsList1;
             listBox.Items.Clear();
             output = "";
-            string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
+            // string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
             textBox.Text = inputBasketMessage.Replace("Number", "1");
@@ -50,7 +50,7 @@ namespace WPFSalesTaxCalculator
             itemsList = itemsList2;
             listBox.Items.Clear();
             output = "";
-            string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
+            // string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
             textBox.Text = inputBasketMessage.Replace("Number", "2");
@@ -61,7 +61,7 @@ namespace WPFSalesTaxCalculator
             itemsList = itemsList3;
             listBox.Items.Clear();
             output = "";
-            string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
+            // string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // check whether content written into and read out of the richtextBox are identical
             // bool contentOK = method.CheckRichTextBoxContent(basketContent, richTextBox);
             textBox.Text = inputBasketMessage.Replace("Number", "3");
@@ -74,7 +74,7 @@ namespace WPFSalesTaxCalculator
             richTextBox.Document.Blocks.Clear();
             placeholder = false;
             output = "";
-            string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
+            // string basketContent = method.ShowSampleBasket(richTextBox, itemsList);
             // add placeholder into richTextBox if user did not add any content yet
             if (itemsList.Count == 0)
             {
