@@ -21,10 +21,10 @@ namespace WPFSalesTaxCalculator
         List<Item> itemsList2 = new List<Item>() { new Item(1, "imported box of chocolates", 1, 10.00), new Item(2, "imported bottle of perfume", 1, 47.50) };
         List<Item> itemsList3 = new List<Item>() { new Item(1, "imported bottle of perfume", 1, 27.99), new Item(1, "bottle of parfume", 1, 18.99), new Item(2, "packet of headache pills", 1, 9.75), new Item(3, "box of imported chocolates", 1, 11.25) };
         List<Item> itemsListNew = new List<Item>();
-        Methods method = new Methods();
+        readonly Methods method = new Methods();
         bool contentChanged = false;
         string output = "";
-        string inputBasketMessage = "Basket Number is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.\nIf you change the amount, leave the price for 1 unit, and the total price will be calculated automatically.";
+        readonly string inputBasketMessage = "Basket Number is selected. Click 'OUTPUT BASKET' to generate the results.\n If you modify the basket, the changes will be kept in memory after the output is made.\nIf you change the amount, leave the price for 1 unit, and the total price will be calculated automatically.";
         private System.Drawing.Printing.PrintDocument printDocument;
         private bool placeholder = false;
         public MainWindow()
