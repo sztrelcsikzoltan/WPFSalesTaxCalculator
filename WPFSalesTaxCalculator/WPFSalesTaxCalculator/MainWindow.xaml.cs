@@ -45,7 +45,7 @@ namespace WPFSalesTaxCalculator
             textBox.Text = inputBasketMessage.Replace("Number", "1");
         }
 
-        public void button_inputBasket2_Click(object sender, RoutedEventArgs e)
+        public void Button_inputBasket2_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsList2;
             listBox.Items.Clear();
@@ -56,7 +56,7 @@ namespace WPFSalesTaxCalculator
             textBox.Text = inputBasketMessage.Replace("Number", "2");
         }
 
-        public void button_inputBasket3_Click(object sender, RoutedEventArgs e)
+        public void Button_inputBasket3_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsList3;
             listBox.Items.Clear();
@@ -67,7 +67,7 @@ namespace WPFSalesTaxCalculator
             textBox.Text = inputBasketMessage.Replace("Number", "3");
         }
 
-        private void button_inputNewBasket_Click(object sender, RoutedEventArgs e)
+        private void Button_inputNewBasket_Click(object sender, RoutedEventArgs e)
         {
             itemsList = itemsListNew;
             listBox.Items.Clear();
@@ -93,7 +93,7 @@ namespace WPFSalesTaxCalculator
             textBox.Text = $"Enter your products similarly to the below sample basket.\n Your modifications will be kept in memory after the output is made.\nAlways provide prices for 1 unit, as the total price will be calculated automatically.";
         }
 
-        private void button_outputBasket_Click(object sender, RoutedEventArgs e)
+        private void Button_outputBasket_Click(object sender, RoutedEventArgs e)
         {
             string richtextBoxContent = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
             string[] rows = richtextBoxContent.Split(new string[] { "\r\n" }, StringSplitOptions.None);
@@ -181,7 +181,7 @@ namespace WPFSalesTaxCalculator
             textBox.Text = "Output for your basket is completed. You may send it now to a txt or pdf file.";
         }
 
-        private void button_saveToTxtFile_Click(object sender, RoutedEventArgs e)
+        private void Button_saveToTxtFile_Click(object sender, RoutedEventArgs e)
         {
             if (output == "")
             {
@@ -207,7 +207,7 @@ namespace WPFSalesTaxCalculator
             }
         }
 
-        private void button_saveToPdfFile_Click(object sender, RoutedEventArgs e)
+        private void Button_saveToPdfFile_Click(object sender, RoutedEventArgs e)
         {
             if (output == "")
             {
@@ -215,12 +215,12 @@ namespace WPFSalesTaxCalculator
                 return;
             }
             this.printDocument = new System.Drawing.Printing.PrintDocument();
-            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
 
             printDocument.Print();
         }
 
-        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void PrintDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Font printFont = new Font("Arial", 18, System.Drawing.FontStyle.Regular);
             System.Drawing.Brush brush = new SolidBrush(System.Drawing.Color.Black);
@@ -229,7 +229,7 @@ namespace WPFSalesTaxCalculator
             textBox.Text = $"The pdf file was saved.";
         }
 
-        private void button_resetBaskets_Click(object sender, RoutedEventArgs e)
+        private void Button_resetBaskets_Click(object sender, RoutedEventArgs e)
         {
             itemsList.Clear();
             itemsList1 =    new List<Item>() { new Item(1, "book", 1, 12.49), new Item(2, "music CD", 1, 14.99), new Item(3, "chocolate bar", 1, 0.85) };
@@ -242,12 +242,12 @@ namespace WPFSalesTaxCalculator
             textBox.Text = $"Content of the baskets was reset.";
         }
 
-        private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             contentChanged = true;
         }
 
-        private void richTextBox_GotFocus(object sender, RoutedEventArgs e)
+        private void RichTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholder)
             {
